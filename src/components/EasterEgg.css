@@ -1,0 +1,35 @@
+/* src/components/EasterEgg.css */
+.easter-egg {
+  position: relative;
+}
+.easter-egg-icon {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #8b4513;
+}
+.easter-egg-modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url("/home/shon/Desktop/women-in-stem-globe/public/parchment.jpg")
+    no-repeat center center;
+  background-size: cover;
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  width: 300px;
+}
+.vintage-button {
+  background-color: #8b4513;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-family: "Great Vibes", cursive;
+}
+.vintage-button:hover {
+  background-color: #a0522d;
+}

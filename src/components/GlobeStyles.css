@@ -1,0 +1,73 @@
+/* src/components/GlobeStyles.css */
+.globe-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hover-modal {
+  position: absolute;
+  background-color: rgba(241, 222, 197, 0.8);
+  padding: 10px;
+  border-radius: 5px;
+  pointer-events: none;
+  z-index: 1000;
+  transform: translate(-50%, 10%);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.click-modal {
+  background: url("/home/shon/Desktop/women-in-stem-globe/public/parchment.jpg")
+    no-repeat center center;
+  background-size: cover;
+  position: absolute;
+  padding: 45px 20px 20px 45px;
+  z-index: 1000;
+  width: 350px;
+  max-width: 80%;
+  transform: translate(-50%, -30%);
+  pointer-events: auto;
+  filter: drop-shadow(15px 20px 15px rgb(31, 15, 0));
+}
+
+.click-modal img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+.click-modal button {
+  display: block;
+  margin: 20px auto 0;
+  padding: 10px 20px;
+  background-color: #964b00;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.click-modal button:hover {
+  background-color: #755131;
+}
+
+.marker {
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  transform-origin: center;
+}
+
+.marker:hover {
+  transform: scale(1.5);
+  box-shadow: 0 0 15px rgba(255, 223, 186, 0.8); /* Glow effect */
+}

@@ -1,0 +1,21 @@
+/* src/components/FilterComponent.css */
+.filter-container {
+  margin: 1rem 0;
+}
+
+.vintage-dropdown {
+  background-color: #f0e6d2;
+  border: 2px solid #704214;
+  padding: 0.5rem;
+  font-family: "Great Vibes", cursive;
+  font-size: 1rem;
+  border-radius: 5px;
+  outline: none;
+  appearance: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.vintage-dropdown:hover {
+  background-color: #e5d8b5;
+}

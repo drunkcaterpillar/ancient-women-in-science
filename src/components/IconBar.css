@@ -1,0 +1,92 @@
+/* src/components/IconBar.css */
+.icon-bar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background: url("/home/shon/Desktop/women-in-stem-globe/public/wooden-texture.jpg")
+    no-repeat center center;
+  background-size: cover;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  max-width: 50%; /* Slightly reduced width for a tighter fit */
+  width: auto;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.icon-bar-container:hover {
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+}
+
+.icon-button {
+  margin: 0 8px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  border-radius: 50%;
+  background-color: rgba(
+    236,
+    189,
+    145,
+    0.5
+  ); /* Slightly increased opacity for visibility */
+  padding: 12px; /* Slightly increased padding for better spacing */
+}
+
+.icon-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3); /* Enhanced glow effect */
+}
+
+.icon-button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  height: 200%;
+  background: rgba(252, 225, 199, 0.25); /* Slightly darker hover background */
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.5s ease-in-out;
+}
+
+.icon-button:hover::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.icon-button svg {
+  width: 28px; /* Reduced size for a more compact look */
+  height: 28px;
+  fill: #704214; /* Slightly darker brown for better contrast */
+  transition: fill 0.3s ease-in-out;
+}
+
+.icon-button:hover svg {
+  fill: #f5deb3; /* Softer color on hover */
+}
+
+@media (max-width: 768px) {
+  .icon-bar-container {
+    flex-direction: row;
+    overflow-x: auto;
+    max-width: 80%; /* Adjusted for smaller screens */
+  }
+  .icon-button {
+    margin: 0 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .icon-bar-container {
+    flex-direction: column;
+    max-width: 100%;
+  }
+  .icon-button {
+    margin: 10px 0;
+  }
+}

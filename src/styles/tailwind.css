@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: transparent; /* Parchment background color */
+  font-family: "Great Vibes", cursive; /* Vintage font */
+}
+
+@layer components {
+  .bg-parchment {
+    @apply bg-cover bg-center;
+    background-image: url("/home/shon/Desktop/women-in-stem-globe/public/parchment.jpg");
+  }
+  .vintage-icon {
+    @apply text-2xl text-brown-800;
+  }
+  .vintage-header {
+    @apply text-4xl font-bold text-brown-800;
+  }
+  .vintage-footer {
+    @apply text-sm text-brown-600 mt-4;
+  }
+  .vintage-container {
+    @apply bg-parchment min-h-screen flex flex-col justify-between;
+  }
+  .vintage-button {
+    @apply bg-brown-800 text-white py-2 px-4 rounded-lg hover:bg-brown-700;
+  }
+  .vintage-modal {
+    @apply bg-white p-4 rounded-lg shadow-lg;
+  }
+}

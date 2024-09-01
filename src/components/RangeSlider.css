@@ -1,0 +1,53 @@
+.range-slider {
+  position: relative;
+  width: 100%;
+  padding: 1rem;
+  background: #d2b48c; /* Tan background for wood look */
+  border: 1px solid #8b4513; /* Darker brown for edges */
+  border-radius: 8px;
+  box-shadow: inset 0 0 10px #8b4513; /* Inner shadow for depth */
+}
+
+.slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 5px;
+  background: #8b4513; /* Slider track color */
+  outline: none;
+  opacity: 0.8;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #deb887; /* Slider thumb color */
+  border: 1px solid #8b4513;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #deb887;
+  border: 1px solid #8b4513;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slider-values {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 0.5rem;
+  color: #8b4513;
+  font-family: "Times New Roman", Times, serif;
+}

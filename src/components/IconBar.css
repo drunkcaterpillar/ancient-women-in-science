@@ -1,15 +1,13 @@
-/* src/components/IconBar.css */
 .icon-bar-container {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 10px;
-  background: url("/home/shon/Desktop/women-in-stem-globe/public/wooden-texture.jpg")
-    no-repeat center center;
+  background: url("/public/wooden-texture.jpg") no-repeat center center;
   background-size: cover;
   border-radius: 20px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  max-width: 50%; /* Slightly reduced width for a tighter fit */
+  max-width: 50%; /* Adjust width for a tighter fit */
   width: auto;
   margin: 0 auto;
   overflow: hidden;
@@ -28,13 +26,8 @@
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
   border-radius: 50%;
-  background-color: rgba(
-    236,
-    189,
-    145,
-    0.5
-  ); /* Slightly increased opacity for visibility */
-  padding: 12px; /* Slightly increased padding for better spacing */
+  background-color: rgba(236, 189, 145, 0.5); /* Match overall theme */
+  padding: 12px;
 }
 
 .icon-button:hover {
@@ -60,33 +53,12 @@
 }
 
 .icon-button svg {
-  width: 28px; /* Reduced size for a more compact look */
+  width: 28px;
   height: 28px;
-  fill: #704214; /* Slightly darker brown for better contrast */
+  fill: #704214; /* Match overall theme */
   transition: fill 0.3s ease-in-out;
 }
 
 .icon-button:hover svg {
   fill: #f5deb3; /* Softer color on hover */
-}
-
-@media (max-width: 768px) {
-  .icon-bar-container {
-    flex-direction: row;
-    overflow-x: auto;
-    max-width: 80%; /* Adjusted for smaller screens */
-  }
-  .icon-button {
-    margin: 0 5px;
-  }
-}
-
-@media (max-width: 480px) {
-  .icon-bar-container {
-    flex-direction: column;
-    max-width: 100%;
-  }
-  .icon-button {
-    margin: 10px 0;
-  }
 }

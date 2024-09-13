@@ -1,4 +1,3 @@
-/* src/components/GlobeStyles.css */
 .globe-container {
   width: 100%;
   max-width: 1200px;
@@ -12,7 +11,12 @@
 
 .hover-modal {
   position: absolute;
-  background-color: rgba(241, 222, 197, 0.8);
+  background-color: rgba(
+    241,
+    222,
+    197,
+    0.8
+  ); /* Keep consistent with parchment look */
   padding: 10px;
   border-radius: 5px;
   pointer-events: none;
@@ -22,8 +26,7 @@
 }
 
 .click-modal {
-  background: url("/home/shon/Desktop/women-in-stem-globe/public/parchment.jpg")
-    no-repeat center center;
+  background: url("/public/parchment.jpg") no-repeat center center;
   background-size: cover;
   position: absolute;
   padding: 45px 20px 20px 45px;
@@ -61,8 +64,9 @@
 .marker {
   width: 20px;
   height: 20px;
+  background: url("/home/shon/Desktop/women-in-stem-globe/public/parchment.jpg")
+    no-repeat center center; /* Use a custom marker icon */
   background-size: contain;
-  background-repeat: no-repeat;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   transform-origin: center;
 }

@@ -18,29 +18,15 @@ const questions = [
     options: ["Marie Curie", "Rosalind Franklin", "Ada Lovelace", "Hypatia"],
     answer: "Marie Curie",
   },
-  {
-    question: "Who developed the first algorithm intended for a machine?",
-    options: ["Ada Lovelace", "Grace Hopper", "Hedy Lamarr", "Emmy Noether"],
-    answer: "Ada Lovelace",
-  },
-  {
-    question:
-      "Who made significant contributions to number theory and elasticity theory?",
-    options: [
-      "Emmy Noether",
-      "Sophie Germain",
-      "Katherine Johnson",
-      "Mary Anning",
-    ],
-    answer: "Sophie Germain",
-  },
-  {
-    question: "Who discovered the first complete Ichthyosaurus fossil?",
-    options: ["Mary Anning", "Rosalind Franklin", "Hypatia", "Fatima al-Fihri"],
-    answer: "Mary Anning",
-  },
   // Add more questions here
 ];
+
+const subjectMapping: { [key: string]: string[] } = {
+  science: ["biology", "chemistry", "physics", "astronomy", "medicine"],
+  technology: ["computing", "engineering technology"],
+  engineering: ["mechanical", "civil", "electrical"],
+  mathematics: ["geometry", "calculus", "algebra", "number theory"],
+};
 
 const App: React.FC = () => {
   const [women, setWomen] = useState<Woman[]>([]);
@@ -54,7 +40,6 @@ const App: React.FC = () => {
     axios
       .get<Woman[]>("http://localhost:5000/women")
       .then((response) => {
-        console.log(response.data); // Log data to ensure it's correct
         setWomen(response.data);
         setFilteredWomen(response.data);
       })
@@ -67,9 +52,15 @@ const App: React.FC = () => {
     if (filter === "all") {
       setFilteredWomen(women);
     } else {
-      const filtered = women.filter((woman) =>
-        woman.subject.toLowerCase().includes(filter.toLowerCase())
-      );
+      const filtered = women.filter((woman) => {
+        // Ensure we check the categories array for matching filters
+        const womanCategories = Array.isArray(woman.categories)
+          ? woman.categories
+          : [woman.categories];
+        return womanCategories.some((category) =>
+          subjectMapping[filter]?.includes(category.toLowerCase())
+        );
+      });
       setFilteredWomen(filtered);
     }
   };

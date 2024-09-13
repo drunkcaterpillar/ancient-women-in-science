@@ -5,8 +5,8 @@ const Schema = mongoose.Schema;
 const womanSchema = new Schema(
   {
     name: { type: String, required: true },
-    subject: { type: String, required: true },
-    birthYear: { type: Number, required: true },
+    categories: { type: [String], required: true }, // Replaced subject with categories
+    birthYear: { type: Number, required: false },
     deathYear: { type: Number, required: false },
     location: { type: String, required: true },
     contribution: { type: String, required: true },
@@ -16,7 +16,6 @@ const womanSchema = new Schema(
     impact: { type: String, required: false },
     lat: { type: Number, required: true },
     lng: { type: Number, required: true },
-    categories: { type: [String], required: true }, // New field for categories
   },
   {
     timestamps: true,

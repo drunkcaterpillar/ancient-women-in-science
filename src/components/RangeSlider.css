@@ -2,10 +2,10 @@
   position: relative;
   width: 100%;
   padding: 1rem;
-  background: #d2b48c; /* Tan background for wood look */
-  border: 1px solid #8b4513; /* Darker brown for edges */
+  background: #d2b48c; /* Keep the wood-like background */
+  border: 1px solid #8b4513; /* Keep the dark edges */
   border-radius: 8px;
-  box-shadow: inset 0 0 10px #8b4513; /* Inner shadow for depth */
+  box-shadow: inset 0 0 10px #8b4513; /* Depth effect for a more medieval look */
 }
 
 .slider {
@@ -13,7 +13,7 @@
   appearance: none;
   width: 100%;
   height: 5px;
-  background: #8b4513; /* Slider track color */
+  background: #8b4513; /* Match the theme */
   outline: none;
   opacity: 0.8;
   -webkit-transition: 0.2s;
@@ -29,7 +29,7 @@
   appearance: none;
   width: 25px;
   height: 25px;
-  background: #deb887; /* Slider thumb color */
+  background: #deb887; /* Keep the theme */
   border: 1px solid #8b4513;
   border-radius: 50%;
   cursor: pointer;
@@ -48,6 +48,6 @@
   display: flex;
   justify-content: space-between;
   padding-top: 0.5rem;
-  color: #8b4513;
-  font-family: "Times New Roman", Times, serif;
+  color: #8b4513; /* Ensure text color fits the overall theme */
+  font-family: "Cinzel", serif; /* Keep font consistency */
 }

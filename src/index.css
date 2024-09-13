@@ -1,18 +1,19 @@
 /* src/index.css */
 @import "./styles/tailwind.css";
-
 body {
   margin: 0;
-  font-family: "Cinzel", serif; /* Updated to Cinzel for a medieval look */
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  font-family: "Cinzel", serif; /* Keep it consistent for a medieval look */
+  background-color: #e5d8b5; /* Set a background color matching the theme */
+  color: #3e2723; /* Dark brown for general text */
 }
 
 .vintage-container {
-  background: rgba(240, 230, 210, 0.9);
+  background: rgba(
+    240,
+    230,
+    210,
+    0.9
+  ); /* Maintain a parchment-style background */
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -23,17 +24,12 @@ code {
   margin-bottom: 20px;
   font-family: "Cinzel Decorative", serif;
   font-size: 2.5rem;
-  color: #704214;
+  color: #704214; /* Color matching the icon bar */
 }
 
-.vintage-footer {
-  text-align: center;
-  margin-top: 20px;
-  font-size: 14px;
-}
-
+/* Ensure consistency in button designs across the website */
 .vintage-button {
-  background-color: #704214;
+  background-color: #704214; /* Matches the overall theme */
   color: white;
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
@@ -44,9 +40,10 @@ code {
 }
 
 .vintage-button:hover {
-  background-color: #3b2f2f;
+  background-color: #3b2f2f; /* Darken on hover */
 }
 
+/* Global card styling to ensure all components look uniform */
 .vintage-card {
   background: rgba(255, 255, 255, 0.8);
   padding: 10px;
@@ -56,10 +53,6 @@ code {
 }
 
 .vintage-modal {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   background: url("/home/shon/Desktop/women-in-stem-globe/public/parchment.jpg")
     no-repeat center center;
   background-size: cover;
@@ -68,33 +61,8 @@ code {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   max-width: 400px;
   z-index: 1000;
-  display: none;
 }
 
 .vintage-modal.show {
   display: block;
-}
-
-.collapsible {
-  cursor: pointer;
-}
-
-.collapsible-content {
-  display: none;
-  padding: 10px;
-}
-
-.collapsible-content.show {
-  display: block;
-}
-
-.icon {
-  margin-right: 5px;
-}
-
-.observed-element {
-  min-width: 100px;
-  min-height: 100px;
-  max-width: 800px;
-  max-height: 800px;
 }

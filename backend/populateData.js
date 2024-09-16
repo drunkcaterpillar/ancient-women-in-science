@@ -102,7 +102,7 @@ const women = [
     lng: 9.19,
   },
   {
-    name: "Émilie du Châtelet",
+    name: "thank u devrim!",
     categories: ["Mathematics", "Physics"],
     birthYear: 1706,
     deathYear: 1749,
